@@ -39,12 +39,6 @@ int main(int argc, char* argv[])
     {
         int aleatorio = rand() % 4;
         char *par_aleatorio = pares_nucleobases[aleatorio];
-        /**
-         * ! Sem o printf abaixo não funciona no meu computador.
-         * ? Eu acho que no cluster da PUC deve rodar corretamente se atualizarem o Open MPI.
-         * TODO: descobrir se é isso mesmo.
-         * * printf("|\tRANK %d\t|\tCICLO %d\t|\t%s\t|\n", rank, i, par_aleatorio);
-        */
         MPI_File_iwrite_all(fh, par_aleatorio, 2, MPI_CHAR, &reqst);
     }
 
