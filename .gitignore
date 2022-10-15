@@ -1,4 +1,4 @@
 dna.txt
-gera.o
-gera-externo.sh
-gera-puc.sh
+*.o
+*-externo.sh
+*-puc.sh
